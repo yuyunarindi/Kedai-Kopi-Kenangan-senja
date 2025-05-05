@@ -1,23 +1,22 @@
-// Toggle class active untuk hamburger menu
+// toggle class active untuk hamburger menu
 const navbarNav = document.querySelector(".navbar-nav");
 // ketika hamburger menu di klik
-document.querySelector("#hamburger-menu").onclick = (e) => {
+document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
 // toggle class active untuk search form
 const searchForm = document.querySelector(".search-form");
 const searchBox = document.querySelector("#search-box");
-// ketika search button di klik
+
 document.querySelector("#search-button").onclick = (e) => {
   searchForm.classList.toggle("active");
   searchBox.focus();
   e.preventDefault();
 };
 
-//toggle class active untuk shpping cart
+// toggle class active untuk shopping cart
 const shoppingCart = document.querySelector(".shopping-cart");
-// ketika shopping cart button di klik
 document.querySelector("#shopping-cart-button").onclick = (e) => {
   shoppingCart.classList.toggle("active");
   e.preventDefault();
@@ -42,7 +41,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Modal Box
+// modal box
 const itemDetailModal = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 
@@ -59,7 +58,7 @@ document.querySelector(".modal .close-icon").onclick = (e) => {
   e.preventDefault();
 };
 
-// Klik di luar modal
+// klik di luar modal
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
     itemDetailModal.style.display = "none";
